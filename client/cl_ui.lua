@@ -1,6 +1,7 @@
 -----------------------
 ----   Variables   ----
 -----------------------
+local QBCore = exports['qb-core']:GetCoreObject()
 local currentMenuItemID = 0
 local currentMenuItem = ""
 local currentMenuItem2 = ""
@@ -209,11 +210,11 @@ function InitiateMenus(isMotorcycle, vehicleHealth, categories, welcomeLabel)
     local plyVeh = GetVehiclePedIsIn(plyPed, false)
     --#[Repair Menu]#--
     if vehicleHealth < 1000.0 and categories.repair then
-        local repairCost = math.ceil(1000 - vehicleHealth)
+        local repairCost = QBCore.Shared.Round(1000 - vehicleHealth)
 
-        TriggerServerEvent("qb-customs:client:updateRepairCost", repairCost)
-        createMenu("repairMenu", welcomeLabel, "Repair Vehicle")
-        populateMenu("repairMenu", -1, "Repair", "$" .. repairCost)
+        TriggerServerEvent("qb-customs:server:updateRepairCost", repairCost)
+        createMenu("repairMenu", welcomeLabel, "維修車輛")
+        populateMenu("repairMenu", -1, "維修", "$" .. repairCost)
         finishPopulatingMenu("repairMenu")
     end
 
@@ -321,14 +322,14 @@ function InitiateMenus(isMotorcycle, vehicleHealth, categories, welcomeLabel)
     end
 
     --#[Respray Menu]#--
-    createMenu("ResprayMenu", "Respray", "Choose a Colour Category")
+    createMenu("ResprayMenu", "Respray", "選擇顏色類別")
 
-    populateMenu("ResprayMenu", 0, "Primary Colour", "none")
-    populateMenu("ResprayMenu", 1, "Secondary Colour", "none")
-    populateMenu("ResprayMenu", 2, "Pearlescent Colour", "none")
-    populateMenu("ResprayMenu", 3, "Wheel Colour", "none")
-    populateMenu("ResprayMenu", 4, "Interior Colour", "none")
-    populateMenu("ResprayMenu", 5, "Dashboard Colour", "none")
+    populateMenu("ResprayMenu", 0, "主色調", "none")
+    populateMenu("ResprayMenu", 1, "副色調", "none")
+    populateMenu("ResprayMenu", 2, "珠光", "none")
+    populateMenu("ResprayMenu", 3, "輪胎顏色", "none")
+    populateMenu("ResprayMenu", 4, "內裝顏色", "none")
+    populateMenu("ResprayMenu", 5, "儀錶板顏色", "none")
 
     finishPopulatingMenu("ResprayMenu")
 

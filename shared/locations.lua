@@ -318,7 +318,7 @@ Config.Locations = {
     ['MRPD'] = {
         settings = {
             label = 'MRPD Motorworks',
-            welcomeLabel = "Welcome to MRPD Motorworks!",
+            welcomeLabel = "歡迎來到 MRPD 車輛改裝!",
             enabled = true,
         },
         categories = {
@@ -329,10 +329,10 @@ Config.Locations = {
             extras = true,
         },
         drawtextui = { 
-            text = "MRPD Motorworks",
+            text = "MRPD 車輛改裝",
         },
         restrictions = {
-            job = { 'police', 'bcso', 'sasp' },
+            job = { 'police', 'bcso', 'sasp', 'saspr' },
             allowedClasses = { 18 },
         },
         zones = {

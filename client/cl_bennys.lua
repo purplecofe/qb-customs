@@ -869,7 +869,13 @@ function DisableControls()
     end)
 end
 
-exports('GetCustomsData', function() if next(CustomsData) ~= nil then return CustomsData else return nil end end)
+exports('GetCustomsData', function()
+     if next(CustomsData) ~= nil then
+         return CustomsData
+        else
+            return nil
+        end
+    end)
 -----------------------
 ----   Threads     ----
 -----------------------
@@ -906,7 +912,8 @@ CreateThread(function()
                         ['heading'] = spot.heading
                     }
                     exports['qb-core']:DrawText(data.drawtextui.text, 'left')
-                elseif CustomsData['location'] == location and CustomsData['spot'] == _name then
+                -- elseif not isPointInside and CustomsData['location'] == location and CustomsData['spot'] == _name then
+                elseif not isPointInside then
                     CustomsData = {}
                     exports['qb-core']:HideText()
                 end
