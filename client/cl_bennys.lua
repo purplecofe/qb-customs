@@ -816,7 +816,7 @@ function EnterLocation(override)
         radialMenuItemId = nil
     end
 
-    exports['qb-core']:HideText()
+    exports['ps-ui']:HideText()
 
     local plyPed = PlayerPedId()
     local plyVeh = GetVehiclePedIsIn(plyPed, false)
@@ -962,7 +962,7 @@ function SetupInteraction()
         text = '[E] '..text
         CheckForKeypress()
     end
-    exports['qb-core']:DrawText(text, 'left')
+    exports['ps-ui']:DisplayText(text, 'primary')
 end
 
 exports('GetCustomsData', function() if next(CustomsData) ~= nil then return CustomsData else return nil end end)
@@ -1003,7 +1003,7 @@ CreateThread(function()
                         radialMenuItemId = nil
                     end
 
-                    exports['qb-core']:HideText()
+                    exports['ps-ui']:HideText()
                 end
             end)
         end
