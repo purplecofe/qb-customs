@@ -345,8 +345,8 @@ Config.Locations = {
     
     ['MRPD'] = {
         settings = {
-            label = 'MRPD Motorworks',
-            welcomeLabel = "Welcome to MRPD Motorworks!",
+            label = 'MRPD Benny',
+            welcomeLabel = "Welcome to MRPD Benny!",
             enabled = true,
         },
         categories = {
@@ -366,7 +366,7 @@ Config.Locations = {
             armor = true,
         },
         drawtextui = {
-            text = "MRPD Motorworks",
+            text = "MRPD Benny",
         },
         restrictions = {
             job = {'police', 'bcso', 'sasp', 'saspr'},
@@ -380,8 +380,8 @@ Config.Locations = {
     
     ['Pillbox'] = {
         settings = {
-            label = 'Pillbox Motorworks',
-            welcomeLabel = "Welcome to Pillbox Motorworks!",
+            label = 'Pillbox Benny',
+            welcomeLabel = "Welcome to Pillbox Benny!",
             enabled = true,
         },
         categories = {
@@ -401,7 +401,7 @@ Config.Locations = {
             armor = true,
         },
         drawtextui = {
-            text = "Pillbox Motorworks"
+            text = "Pillbox Benny"
         },
         restrictions = {
             job = {'ambulance'},
